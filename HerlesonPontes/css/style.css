@@ -1,0 +1,432 @@
+/* ---- FONTES ---- */
+
+@font-face {
+    font-family: "circeBold";
+    src: url('../fonts/circe_bold.otf') format("truetype");
+}
+
+@font-face {
+    font-family: "circeExtraLight";
+    src: url('../fonts/circe_extralight.otf') format("truetype");
+}
+
+.circebold {
+    font-family: 'circeBold', sans-serif !important;
+}
+
+.circeextralight {
+    font-family: 'circeExtraLight', sans-serif !important;
+}
+
+/* ---- GERAL ---- */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.hor-list {
+    display: inline-block;
+}
+
+.hor-list li {
+    float: left;
+    margin-left: 10px;
+}
+
+
+
+/* ---- MENU E INDEX ---- */
+
+nav a {
+    font-weight: 300;
+    font-size: 1.2em !important;
+}
+
+header nav {
+    box-shadow: none;
+}
+
+
+#index-banner {
+    background: url('../images/abertura_servico.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+#index-banner-inside {
+    background: rgba(0, 0, 0, 0.7);
+    padding-top: 0;
+    height: 100%;
+}
+
+.nav-wrapper {
+    margin-right: 30px;
+}
+
+.nav-wrapper li {
+    margin-left: 10px;
+}
+
+#index-banner-inside img {
+    width: 18vw;
+}
+
+#index-banner-inside > div span {
+    color: #0d47a1;
+}
+
+#mouse-scroll {
+  style: block;
+}
+
+#mouse-scroll {
+  position: absolute;
+  margin: auto;
+  left: 10%;
+  bottom: 80px;
+  -webkit-transform: translateX(-50%);
+  z-index: 9999;
+}
+#mouse-scroll span{
+  display: block;
+  width: 10px; 
+  height: 10px;
+  -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+       transform: rotate(45deg);
+       transform: rotate(45deg);
+  border-right: 2px solid #fff; 
+  border-bottom: 2px solid #fff;
+  margin: 0 0 6px 10px;
+}
+#mouse-scroll .mouse {
+  height: 42px;
+  width: 28px;
+  border-radius: 10px;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  border: 2px solid #ffffff;
+  top: 170px;
+}
+#mouse-scroll .down-arrow-1 {
+  margin-top: 6px;
+}
+#mouse-scroll .down-arrow-1, #mouse-scroll .down-arrow-2, #mouse-scroll .down-arrow-3 {
+  -webkit-animation: mouse-scroll 1s infinite; 
+    -moz-animation: mouse-scroll 1s infinite:
+}
+#mouse-croll .down-arrow-1 {
+   -webkit-animation-delay: .1s; 
+   -moz-animation-delay: .1s;
+   -webkit-animation-direction: alternate;
+}
+#mouse-scroll .down-arrow-2 {
+  -webkit-animation-delay: .2s; 
+  -moz-animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+}
+#mouse-scroll .down-arrow-3 {
+   -webkit-animation-delay: .3s;
+   -moz-animation-dekay: .3s;
+   -webkit-animation-direction: alternate;
+}
+
+#mouse-scroll .mouse-in {
+  height: 5px;
+  width: 2px;
+  display: block; 
+  margin: 5px auto;
+  background: #ffffff;
+  position: relative;
+}
+#mouse-scroll .mouse-in {
+ -webkit-animation: animated-mouse 1.2s ease infinite;
+  moz-animation: mouse-animated 1.2s ease infinite;
+}
+
+@-webkit-keyframes animated-mouse {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100% {
+     opacity: 0;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@-webkit-keyframes mouse-scroll {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  } 
+}
+@keyframes mouse-scroll {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* ---- ABOUT ---- */
+
+#about, #about-left{
+    height: 500px; 
+    overflow: hidden;
+    padding: 0;
+}
+
+
+
+#about-left img {
+    height: 100%;
+}
+
+
+
+#about-right {
+    padding: 50px;
+    padding-right: 160px;
+    color: whitesmoke;
+    height: 100%;
+}
+
+#about-right h2 {
+    font-weight: 800;
+}
+
+
+#about-right p {
+    margin: 40px 0;
+}
+
+.social-list {
+    margin-top: 30px;
+}
+
+@media(max-width:1000px) {
+    
+    #about{
+        min-height: 500px; 
+        overflow:auto;
+    }
+
+    #about-right {
+        padding-right: 50px;
+        height: 100%;
+    }
+}
+
+/* ---- BLOG ---- */
+
+.blog-header, .contact-header, .testimonial-header {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
+.blog-box {
+    padding: 10px;
+}
+
+.blog-box .box-inside {
+    background: whitesmoke;
+}
+
+.blog-box .box-text {
+    padding: 10px;
+}
+
+.box-text a{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.blog-img {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.blog-img img {
+    width: 100%;
+}
+
+#blog .btn-div a{
+    width: 100%;
+    margin-bottom: 80px;
+    font-size: 25px;
+}
+
+/* ---- SERVICES ---- */
+
+#services {
+    display: flex;
+}
+
+#services .row {
+    margin-bottom: 0 !important;
+}
+
+.service-box {
+    min-width: 25%;
+    overflow: hidden;
+    flex: 1 0 auto;
+    height: 100%;
+    padding: 40px !important;
+}
+
+.service-box .line-below {
+    width: 30px;
+    height: 3px;
+    background: #fff;
+}
+
+.cti-img {
+    background: url('../images/Eueherleson.jpg');
+    background-position: right;
+}
+
+.trp-img {
+    background: url('../images/Eueherleson2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* ---- CONTACT ---- */
+
+.contact-header p{
+    padding: 0 80px;
+}   
+
+
+/* ---- TESTIMONIAL ---- */
+
+
+article {
+  margin: 20px auto;
+  width: 80%;
+  padding: 1em;
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 1em;
+  color: #f1f1f1;
+}
+
+.quote {
+  background: #0d47a1;
+  padding: 15px 20px 5px 15px;
+  margin: 30px;    
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.quote:after {
+  content: '';
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 20px 18px 0 18px;
+  border-color: #0d47a1 transparent transparent transparent;
+  position: relative;
+  top: 37px;
+  left: 20px;
+}
+
+.student {
+  margin-left: 25px;
+  margin-bottom: 80px;
+}
+.student p {
+  position: relative;
+  top: 5px;
+  text-transform: uppercase;
+}
+
+.student p:nth-child(2) {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.student p:nth-child(3) {
+  font-size: 14px;
+  color: #777;
+}
+
+.row {
+    max-width: inherit;
+}
+
+/* ------------------------ */
+
+.banner-call {
+    padding: 40px; 
+}
+
+
+@media(min-width:700px) {
+    
+    .banner-btn {
+        margin-top: 50px;    
+    }
+    
+    
+}
+
+
+.footer-line {
+    width: 100%;
+    height: 4px;
+    background: #fdd835;
+}
+
+#curriculo {
+    margin-bottom: 70px;
+}
+
+#subpage-banner {
+    background: url('../images/abertura_servico.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+}
+
+#subpage-about {
+    padding: 40px;
+}
+
+
+.bullet-list {
+    list-style-type: circle !important;
+}
+
+.navbar-top.scrolled {
+  background-color: #01579b !important;
+  transition: background-color 200ms linear;
+}
+
+.gallerybox {
+    
+}
